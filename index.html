@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IIT INDOOR 2026</title>
+  <meta name="description" content="IIT INDOOR 2026 — Organized by BSSE 17" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+  <link rel="icon" href="./icon/icon.png" type="image/png" />
+</head>
+<body>
+  <div class="bg">
+    <div class="bg__blob bg__blob--a"></div>
+    <div class="bg__blob bg__blob--b"></div>
+    <div class="bg__grid"></div>
+  </div>
+
+  <header class="topbar" id="top">
+    <div class="container topbar__inner">
+      <a class="brand" href="#top">
+        <span class="brand__dot"></span>
+        <span class="brand__name">IIT INDOOR <span class="brand__year">2026</span></span>
+      </a>
+
+      <nav class="nav">
+        <a href="#schedule">Schedule</a>
+        <a href="#gallery">Gallery</a>
+      </nav>
+      <button id="musicIcon" class="musicIcon" aria-pressed="false" title="Toggle music" aria-label="Toggle music">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+          <path fill="currentColor" d="M3 10v4h4l5 5V5L7 10H3z"/>
+          <path fill="currentColor" d="M16.5 8.5a4 4 0 0 1 0 7" opacity="0.85"/>
+        </svg>
+      </button>
+
+      <button id="liveRadar" class="liveRadar" aria-pressed="false" title="Live Radar" aria-label="Live Radar">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 3a9 9 0 1 0 9 9h-2a7 7 0 1 1-7-7V3zM6.5 8.5A6.5 6.5 0 0 0 12 18v-2a4.5 4.5 0 0 1-4.5-7.5zM12 6a6 6 0 0 0-6 6H4a8 8 0 0 1 8-8V6z"/></svg>
+      </button>
+
+      <a class="cta" href="#schedule">Explore Events</a>
+      <a class="cta register" href="https://forms.gle/cA6CuHJvJqnVvNNc8" target="_blank" rel="noreferrer" title="Register Now">
+        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.1 0-2 .9-2 2v14a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/></svg>
+        <span style="margin-left:8px">Register Now</span>
+      </a>
+
+    </div>
+  </header>
+
+  <div class="announcement" id="announcement" role="region" aria-label="Announcement" title="Click to open Live Radar">
+    <div class="announcement__track">
+      <span>Event Dates: 8 — 9 May 2026</span>
+      <span>Event Dates: 8 — 9 May 2026</span>
+    </div>
+  </div>
+
+  <main>
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <p class="hero__kicker">Indoor Games • 2-Day Event</p>
+          <h1 class="hero__title">IIT INDOOR <span class="hero__titleAccent">2026</span></h1>
+          <p class="hero__sub">Organized by <strong>BSSE 17</strong></p>
+
+          <div class="countdownCard">
+            <div class="countdownCard__head">
+              <span class="pill">Battle Commences In</span>
+              <span id="eventDateLabel" class="muted"></span>
+            </div>
+            <div class="countdown" aria-label="Countdown">
+              <div class="countdown__box"><div class="countdown__num" id="cdDays">00</div><div class="countdown__lbl">Days</div></div>
+              <div class="countdown__box"><div class="countdown__num" id="cdHours">00</div><div class="countdown__lbl">Hours</div></div>
+              <div class="countdown__box"><div class="countdown__num" id="cdMins">00</div><div class="countdown__lbl">Mins</div></div>
+              <div class="countdown__box"><div class="countdown__num" id="cdSecs">00</div><div class="countdown__lbl">Secs</div></div>
+            </div>
+
+          </div>
+
+          <div class="hero__meta">
+            <div class="metaCard">
+              <div class="metaCard__k">All Time Open</div>
+              <div class="metaCard__v">Casual + Free games</div>
+            </div>
+            <div class="metaCard">
+              <div class="metaCard__k">Locations</div>
+              <div class="metaCard__v">IIT • Gymnasium</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__media" aria-label="Event banner">
+          <div class="poster">
+            <img src="./gallery/1.png" alt="IIT INDOOR 2026 Banner" loading="eager" />
+            <div class="poster__overlay">
+              <div class="poster__badge">IIT INDOOR 2026</div>
+              <div class="poster__small">Organized by BSSE 17</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="schedule">
+      <div class="container">
+        <div class="section__head">
+          <h2>Segment-wise Schedule</h2>
+        </div>
+
+        <div class="tabs" role="tablist" aria-label="Schedule tabs">
+          <button class="tab is-active" data-tab="alltime" role="tab" aria-selected="true">All Time Open</button>
+          <button class="tab" data-tab="fri" role="tab" aria-selected="false">Friday</button>
+          <button class="tab" data-tab="sat" role="tab" aria-selected="false">Saturday</button>
+        </div>
+
+        <div class="tabpanes">
+          <div class="tabpane is-active" id="tab-alltime" role="tabpanel"></div>
+          <div class="tabpane" id="tab-fri" role="tabpanel"></div>
+          <div class="tabpane" id="tab-sat" role="tabpanel"></div>
+        </div>
+
+
+      </div>
+    </section>
+
+    <section class="section" id="gallery">
+      <div class="container">
+        <div class="section__head">
+          <h2>Gallery</h2>
+          <p class="muted">Highlights and moments.</p>
+        </div>
+        <div id="galleryGrid" class="gallery"></div>
+      </div>
+
+      <div class="lightbox" id="lightbox" aria-hidden="true">
+        <button class="lightbox__close" id="lightboxClose" aria-label="Close">×</button>
+        <img id="lightboxImg" alt="Gallery preview" />
+      </div>
+    </section>
+
+    <section class="section" id="register">
+      <div class="container" style="text-align:center">
+        <a class="cta register" href="https://forms.gle/cA6CuHJvJqnVvNNc8" target="_blank" rel="noreferrer" title="Register Now">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.1 0-2 .9-2 2v14a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/></svg>
+          <span style="margin-left:10px">Register Now</span>
+        </a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div>
+          <div class="footer__title">IIT INDOOR 2026</div>
+          <div class="muted">Organized by BSSE 17</div>
+        </div>
+        <div class="muted">© <span id="yearNow"></span> • IIT</div>
+      </div>
+    </footer>
+  </main>
+
+  <a class="messenger" href="https://www.facebook.com/bsse17iit" target="_blank" rel="noreferrer" aria-label="Message BSSE 17 IIT">
+    <svg viewBox="0 0 48 48" width="22" height="22" aria-hidden="true">
+      <path fill="currentColor" d="M24 4C12.8 4 4 12.3 4 22.6c0 5.7 2.7 10.7 7 14.1V44l6.4-3.5c2.1.6 4.3.9 6.6.9 11.2 0 20-8.3 20-18.6S35.2 4 24 4zm2 25.2l-5.1-5.4-10 5.4 11-11.7 5.1 5.4 9.8-5.4-10.8 11.7z"/>
+    </svg>
+  </a>
+
+  <audio id="bgMusic" preload="auto" loop>
+    <source src="./audio/Jim Yosef - Firefly [NCS Release].mp3" type="audio/mpeg" />
+  </audio>
+  <script src="./app.js" defer></script>
+</body>
+</html>
